@@ -136,7 +136,7 @@ To add new features or fix bugs:
 
 ## Data Updates
 
-The CSV data is updated regularly. Last update: June 1, 2025
+The CSV data is updated regularly. Last update: June 1, 2024
 
 To regenerate `companies.json` after adding new companies:
 ```bash
