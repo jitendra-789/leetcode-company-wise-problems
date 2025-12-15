@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetCode Company-Wise Problems</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 LeetCode Company-Wise Problems</h1>
+            <p class="subtitle">Curated lists of LeetCode questions grouped by companies</p>
+        </header>
+
+        <div class="search-section">
+            <input type="text" id="companySearch" placeholder="Search for a company..." class="search-input">
+        </div>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <h3>Companies</h3>
+                <div id="companyList" class="company-list"></div>
+            </aside>
+
+            <main class="content-area">
+                <div id="welcomeScreen" class="welcome-screen">
+                    <h2>Welcome! 👋</h2>
+                    <p>Select a company from the left to view LeetCode problems</p>
+                    <div class="stats">
+                        <div class="stat-card">
+                            <div class="stat-number" id="totalCompanies">0</div>
+                            <div class="stat-label">Companies</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">2,350</div>
+                            <div class="stat-label">CSV Files</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="problemsScreen" class="problems-screen" style="display: none;">
+                    <div class="company-header">
+                        <h2 id="selectedCompany"></h2>
+                        <div class="time-period-selector">
+                            <button class="period-btn active" data-period="1">30 Days</button>
+                            <button class="period-btn" data-period="2">3 Months</button>
+                            <button class="period-btn" data-period="3">6 Months</button>
+                            <button class="period-btn" data-period="4">6+ Months</button>
+                            <button class="period-btn" data-period="5">All Time</button>
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <input type="text" id="problemSearch" placeholder="Search problems..." class="search-input">
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-difficulty="ALL">All</button>
+                            <button class="filter-btn easy" data-difficulty="EASY">Easy</button>
+                            <button class="filter-btn medium" data-difficulty="MEDIUM">Medium</button>
+                            <button class="filter-btn hard" data-difficulty="HARD">Hard</button>
+                        </div>
+                    </div>
+
+                    <div id="problemsInfo" class="problems-info"></div>
+
+                    <div class="table-container">
+                        <table id="problemsTable">
+                            <thead>
+                                <tr>
+                                    <th class="sortable" data-sort="difficulty">Difficulty</th>
+                                    <th class="sortable" data-sort="title">Title</th>
+                                    <th class="sortable" data-sort="frequency">Frequency</th>
+                                    <th class="sortable" data-sort="acceptance">Acceptance</th>
+                                    <th>Topics</th>
+                                    <th>Link</th>
+                                </tr>
+                            </thead>
+                            <tbody id="problemsTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <footer>
+            <p>Data updated as of June 1, 2024 | <a href="https://github.com/jitendra-789/leetcode-company-wise-problems" target="_blank">GitHub Repository</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
